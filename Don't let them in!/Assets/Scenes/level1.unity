@@ -4399,6 +4399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d249ef289a2a61841ab41277c6ed1612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charters:
+  - {fileID: 1336528821668394, guid: 269b636b886c16c45a1b2dfb2eda1797, type: 2}
+  - {fileID: 1007728351137268, guid: aaf5484a216a500439dd7394f17a1164, type: 2}
 --- !u!114 &2069106007
 MonoBehaviour:
   m_ObjectHideFlags: 0

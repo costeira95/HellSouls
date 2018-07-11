@@ -194,8 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9374f0a0ab1d348bcc337ae159c091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wasBought: 0
-  price: 0
+  isSelected: 1
+  wasBought: 1
+  price: 50
 --- !u!114 &114977602238443620
 MonoBehaviour:
   m_ObjectHideFlags: 1
