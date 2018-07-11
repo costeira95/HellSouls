@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance = null;
-
+    public GameObject[] charters;
+    
 	// Use this for initialization
 	void Awake () {
         Screen.orientation = ScreenOrientation.Landscape;
@@ -15,6 +16,18 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        foreach (var c in charters)
+        {
+            var player = c.GetComponent<Player>();
+            if (player.wasBought && player.isSelected)
+            {
+                Debug.Log("Teste" + player.price);
+            }
+        }
     }
 
     // Update is called once per frame

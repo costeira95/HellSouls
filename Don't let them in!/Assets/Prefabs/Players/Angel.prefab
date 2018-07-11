@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 61712430599644480}
   - component: {fileID: 114004960701573858}
   - component: {fileID: 114977602238443620}
+  - component: {fileID: 114178405307160928}
   m_Layer: 0
   m_Name: Angel
   m_TagString: Player
@@ -182,6 +183,19 @@ MonoBehaviour:
     m_Bits: 768
   groundCheck: {fileID: 4926884635544396}
   groundCheckRadious: 0.5
+--- !u!114 &114178405307160928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336528821668394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9374f0a0ab1d348bcc337ae159c091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasBought: 0
+  price: 0
 --- !u!114 &114977602238443620
 MonoBehaviour:
   m_ObjectHideFlags: 1
