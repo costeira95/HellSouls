@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         Screen.orientation = ScreenOrientation.Landscape;
-        Camera.main.aspect = 18f / 9f;
         if (Instance == null)
             Instance = this;
         else if (Instance != this)
