@@ -737,8 +737,9 @@ Transform:
   - {fileID: 465808540}
   - {fileID: 1833976156}
   - {fileID: 1908107236}
+  - {fileID: 1575278444}
   m_Father: {fileID: 2096443616}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &312619343
 SpriteRenderer:
@@ -3405,7 +3406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1575278444}
   - component: {fileID: 1575278445}
-  - component: {fileID: 1575278446}
   m_Layer: 0
   m_Name: Back2
   m_TagString: Untagged
@@ -3420,11 +3420,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575278443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.85300004, y: 1.6540002, z: 0}
-  m_LocalScale: {x: 2.4058318, y: 2.8539433, z: 1.164832}
+  m_LocalPosition: {x: -0.40570706, y: 0.7809858, z: 0}
+  m_LocalScale: {x: 1.118825, y: 1.3229398, z: 1.164832}
   m_Children: []
-  m_Father: {fileID: 2096443616}
-  m_RootOrder: 1
+  m_Father: {fileID: 312619342}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1575278445
 SpriteRenderer:
@@ -3472,18 +3472,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1575278446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1575278443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5f11cc4f7645c4e80d6a3d7d49d005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0.05
 --- !u!1 &1615426559
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,7 +4162,7 @@ Transform:
   m_LocalScale: {x: 2.220573, y: 2.2207322, z: 1}
   m_Children: []
   m_Father: {fileID: 2096443616}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2015880434
 SpriteRenderer:
@@ -4582,7 +4570,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1512175917}
-  - {fileID: 1575278444}
   - {fileID: 312619342}
   - {fileID: 2015880433}
   m_Father: {fileID: 1887136090}
