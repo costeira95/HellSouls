@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pit
   - Enemy
+  - Enemy_Boss
+  - Boss
   layers:
   - Default
   - TransparentFX

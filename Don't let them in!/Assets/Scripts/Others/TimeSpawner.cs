@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeSpawner : MonoBehaviour {
 
-    public GameObject spawnee;
+    public GameObject[] spawnee;
     public float spawnTime;
     public float spawnDelay;
     public bool stopSpawning;
@@ -16,8 +16,9 @@ public class TimeSpawner : MonoBehaviour {
 	
     void Spawn()
     {
-        if (stopSpawning)
+        if (stopSpawning) {
             CancelInvoke("Spawn");
-        Instantiate(spawnee, transform.position, Quaternion.identity);
+        }
+        Instantiate(spawnee[Random.Range(0, spawnee.Length-1)], transform.position, Quaternion.identity);
     }
 }

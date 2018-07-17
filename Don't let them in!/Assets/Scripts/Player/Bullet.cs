@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour {
 
@@ -24,6 +25,9 @@ public class Bullet : MonoBehaviour {
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+        } else if(other.gameObject.CompareTag("Enemy_Boss"))
+        {
+            SceneManager.LoadScene("vampire");
         }
     }
 }

@@ -8,7 +8,7 @@ public class RotateEnemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy_Boss"))
         {
             other.transform.Rotate(0, 0, rotation);
         }
