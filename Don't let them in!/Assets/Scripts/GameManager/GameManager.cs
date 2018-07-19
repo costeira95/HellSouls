@@ -6,9 +6,10 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance = null;
     public GameObject[] charters;
-    
-	// Use this for initialization
-	void Awake () {
+    public bool isBossLevel = false;
+
+    // Use this for initialization
+    void Awake () {
         Screen.orientation = ScreenOrientation.Landscape;
         if (Instance == null)
             Instance = this;

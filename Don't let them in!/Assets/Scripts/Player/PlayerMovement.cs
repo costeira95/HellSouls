@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update()
     {
+        if (camAnim == null) camAnim = Camera.main.GetComponent<Animator>();
+
         if (!isJumping && !isPressing)
             direction = 0;
 

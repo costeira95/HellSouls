@@ -2505,6 +2505,7 @@ GameObject:
   - component: {fileID: 882820655}
   - component: {fileID: 882820660}
   - component: {fileID: 882820659}
+  - component: {fileID: 882820661}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2624,6 +2625,17 @@ MonoBehaviour:
   SpawnPosition: {fileID: 1984897473}
   startShootRate: 0.25
   Player: {fileID: 377096517}
+--- !u!114 &882820661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882820654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b0d9f2717775a4ca24428e3d07ef88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &899538070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4994,7 +5006,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096443616}
-  - component: {fileID: 2096443617}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -5018,17 +5029,6 @@ Transform:
   m_Father: {fileID: 1887136090}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2096443617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2096443615}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce0f36a6f5a259489bf97808a6294f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2126358525
 Prefab:
   m_ObjectHideFlags: 0
