@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Enemy_Boss
   - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - Boss
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
