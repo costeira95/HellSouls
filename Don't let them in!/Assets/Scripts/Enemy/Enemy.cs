@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour {
 
     private Transform target;
     public float speed;
-    public bool facingRight;
+    public bool facingRight; // Verifica se está a olhar para a direita 
 
     // Use this for initialization
     void Awake()
@@ -19,9 +19,11 @@ public class Enemy : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //Move o inimigo para o pit
        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
+    // Vira o personagem para o lado correto
     void Flip()
     {
         Vector3 scaler = transform.localScale;

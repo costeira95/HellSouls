@@ -1290,6 +1290,11 @@ Prefab:
       propertyPath: spawnPositions.Array.data[17]
       value: 
       objectReference: {fileID: 627102314}
+    - target: {fileID: 114474518458109048, guid: be5aac651e2ab9c4096b561f13c5e275,
+        type: 2}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114365197066901564, guid: be5aac651e2ab9c4096b561f13c5e275, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: be5aac651e2ab9c4096b561f13c5e275, type: 2}

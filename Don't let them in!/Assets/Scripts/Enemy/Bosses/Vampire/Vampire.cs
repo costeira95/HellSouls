@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Vampire : MonoBehaviour {
-
+    
+    /**************************************************************
+     * Variáveis para o vampiro, spawnPositions são os sitios onde
+     * vai spawnar random, se está a mover, moveTime é o tempo
+     * que fica parado, move é a posião onde se vai mover e 
+     * o can move verifica se o personagem se pode mover
+     */
     public GameObject[] spawnPositions;
     public bool isMoving = false;
     public float moveTime;
     private GameObject player;
     private int move;
     private bool canMove = false;
+    public int Health;
 
     // Use this for initialization
     void Start () {
@@ -18,12 +25,14 @@ public class Vampire : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // se não estiver a mover começa a corrutina
 		if(!isMoving)
         {
             StartCoroutine(Move());
         }
     }
 
+    // Move o vampiro para uma posição aleatoria
     IEnumerator Move()
     {
         StartCoroutine(ChooseRandom());
@@ -37,6 +46,7 @@ public class Vampire : MonoBehaviour {
         }
     }
 
+    // Procura a melhor posição random e que não esteja perto do jogador
     IEnumerator ChooseRandom()
     {
         while (!canMove)
@@ -48,5 +58,12 @@ public class Vampire : MonoBehaviour {
                 canMove = true;
         }
         yield return null;
+    }
+
+    //função para tirar vida ao vampiro
+    public void TakeDamage(int amount)
+    {
+        if(Health > 0)
+            Health -= amount;
     }
 }

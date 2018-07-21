@@ -25,10 +25,12 @@ public class Bullet : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            GameManager.Instance.Score();
             Destroy(other.gameObject);
             Destroy(gameObject);
         } else if(other.gameObject.CompareTag("Enemy_Boss"))
         {
+            GameManager.Instance.Score();
             GameManager.Instance.isBossLevel = true;
             SceneManager.LoadScene("vampire");
         }
@@ -37,6 +39,9 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Boss"))
-            Debug.Log("Boss");
+        {
+            Destroy(gameObject);
+            other.gameObject.GetComponent<Vampire>().TakeDamage(1);
+        }
     }
 }
