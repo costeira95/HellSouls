@@ -28,7 +28,6 @@ public class BatSpawn : MonoBehaviour {
         // instancia um morcego
         if (isMoving)
         {
-            //yield return new WaitUntil(() => isMoving == true);
             Instantiate(batPrefab, transform.position, Quaternion.identity);
             canSpawn = false;
             yield return new WaitForSeconds(spawnTime); // Espera x segfundos até ao proximo spawn
