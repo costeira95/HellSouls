@@ -9,6 +9,7 @@ TagManager:
   - Enemy_Boss
   - Boss
   - Bullet
+  - BatSpawn
   layers:
   - Default
   - TransparentFX

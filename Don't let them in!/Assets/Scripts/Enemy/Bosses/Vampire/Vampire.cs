@@ -5,7 +5,7 @@ using UnityEngine;
 public class Vampire : MonoBehaviour {
 
     public GameObject[] spawnPositions;
-    private bool isMoving;
+    public bool isMoving = false;
     public float moveTime;
     private GameObject player;
     private int move;

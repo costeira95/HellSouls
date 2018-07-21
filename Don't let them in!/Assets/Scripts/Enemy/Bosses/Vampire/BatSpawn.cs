@@ -7,15 +7,17 @@ public class BatSpawn : MonoBehaviour {
     /* ***********************************************
      * Criação de variaveis para o spawn do morcego
      */
-    public GameObject[] spawnPoints;
     public GameObject batPrefab;
     private bool canSpawn = true;
     public float spawnTime;
+    private bool isMoving;
 
     // Update is called once per frame
     void Update () {
         // Verifica de pode spawnar um morcego
-		if(canSpawn) 
+        isMoving = transform.parent.GetComponent<Vampire>().isMoving;
+
+        if (canSpawn) 
         {
             StartCoroutine(Spawn());
         }
@@ -23,13 +25,14 @@ public class BatSpawn : MonoBehaviour {
 
     IEnumerator Spawn()
     {
-        // Precorre a lista de spawn points instancia um morcego
-        foreach (var spawn in spawnPoints)
+        // instancia um morcego
+        if (isMoving)
         {
-           Instantiate(batPrefab, spawn.transform.position, Quaternion.identity);
+            //yield return new WaitUntil(() => isMoving == true);
+            Instantiate(batPrefab, transform.position, Quaternion.identity);
+            canSpawn = false;
+            yield return new WaitForSeconds(spawnTime); // Espera x segfundos até ao proximo spawn
+            canSpawn = true;
         }
-        canSpawn = false;
-        yield return new WaitForSeconds(spawnTime); // Espera x segfundos até ao proximo spawn
-        canSpawn = true;
     }
 }
