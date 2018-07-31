@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,8 +11,12 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance = null;
     public GameObject[] charters;
     public bool isBossLevel = false;
-
-    private int score; // score do jogo
+    private int score;
+    public  GameObject[] spawners;
+    // UI do jogo
+    public GameObject scoreUI;
+    public GameObject gameOverUI;
+    
     // Use this for initialization
     void Awake () {
         Screen.orientation = ScreenOrientation.Landscape;
@@ -45,13 +50,21 @@ public class GameManager : MonoBehaviour {
     {
         if (GetComponent<Health>().health > 0)
             GetComponent<Health>().health--;
-        else
-            Debug.Log("You dead!");
+        if(GetComponent<Health>().health <= 0)
+        {
+            gameOverUI.SetActive(true);
+            foreach (var s in spawners)
+            {
+                s.GetComponent<TimeSpawner>().stopSpawning = true;
+            }
+        }
+            
     }
 
     //Função para dar pontos ao personagem
     public void Score()
     {
         score++;
+        scoreUI.GetComponent<Text>().text = score.ToString();
     }
 }

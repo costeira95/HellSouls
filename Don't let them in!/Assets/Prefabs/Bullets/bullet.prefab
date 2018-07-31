@@ -151,6 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 1000
+  bossesLevel:
+  - vampire
+  hitEffect: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 2}
+  damage: 5
 --- !u!212 &212134288603704596
 SpriteRenderer:
   m_ObjectHideFlags: 1

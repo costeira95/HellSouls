@@ -17,6 +17,6 @@ public class Player : MonoBehaviour {
             DontDestroyOnLoad(this);
         }
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
 }

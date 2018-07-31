@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour {
 
     private Transform target;
     public float speed;
-    public bool facingRight; // Verifica se está a olhar para a direita 
-
+    public bool facingRight; // Verifica se está a olhar para a direita
     // Use this for initialization
     void Awake()
     {

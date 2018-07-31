@@ -16,7 +16,8 @@ public class Vampire : MonoBehaviour {
     private GameObject player;
     private int move;
     private bool canMove = false;
-    public int Health;
+
+    public GameObject moveParticle;
 
     // Use this for initialization
     void Start () {
@@ -38,6 +39,7 @@ public class Vampire : MonoBehaviour {
         StartCoroutine(ChooseRandom());
         if (canMove)
         {
+            Instantiate(moveParticle, transform.position, Quaternion.identity);
             transform.position = spawnPositions[move].transform.position;
             isMoving = true;
             yield return new WaitForSeconds(moveTime);
@@ -58,12 +60,5 @@ public class Vampire : MonoBehaviour {
                 canMove = true;
         }
         yield return null;
-    }
-
-    //função para tirar vida ao vampiro
-    public void TakeDamage(int amount)
-    {
-        if(Health > 0)
-            Health -= amount;
     }
 }

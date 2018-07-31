@@ -14,7 +14,7 @@ public class Canvas : MonoBehaviour {
             DontDestroyOnLoad(instance);
         }
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
     // Use this for initialization
     void Start () {

@@ -8,6 +8,7 @@ public class BatSpawn : MonoBehaviour {
      * Criação de variaveis para o spawn do morcego
      */
     public GameObject batPrefab;
+    public GameObject boss;
     private bool canSpawn = true;
     public float spawnTime;
     private bool isMoving;
@@ -29,6 +30,7 @@ public class BatSpawn : MonoBehaviour {
         if (isMoving)
         {
             Instantiate(batPrefab, transform.position, Quaternion.identity);
+            boss.GetComponent<Animator>().SetTrigger("attack");
             canSpawn = false;
             yield return new WaitForSeconds(spawnTime); // Espera x segfundos até ao proximo spawn
             canSpawn = true;
